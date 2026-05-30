@@ -1,0 +1,1215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+ * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    overflow-x: hidden;
+    width: 100%;
+}
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* NAV BAR */
+nav {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+    padding: 20px;
+    position:fixed;
+    background: transparent;
+    color: rgb(10, 10, 10);
+    width: 86%;
+    z-index: 1000; 
+     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+}
+.image1{
+    width:200px;
+    height:100px;
+    position:relative;
+    left:78px;
+    top:-5px;
+   
+}
+.line{
+    width:100%;
+    height:2px;
+    background-color: black;
+    position:relative;
+    left:25px;
+    top:4px;
+}
+.k5{
+  color:yellow;
+}
+
+/* nav move */
+@keyframes para1 {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }}
+@keyframes para2 {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }}
+
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 35px;
+     animation-name: para1;
+  animation-duration: 4s;
+}
+.b-nav{
+    visibility: hidden;
+}
+#abc:checked ~ .right {
+    left: 0%;
+   
+}
+
+#abc {
+    display: none;
+}
+a {
+    font-size: 25px;
+    padding: 2px 3px;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none !important;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: black !important;
+ 
+   
+   
+}
+a:hover{
+    background-image: url("./assets/Kerala-Tourism 1.png");
+    background-size: cover;
+    background-position: center;
+    transition: all 2s ease;
+    border-radius: 20px;
+    transform: scale(1.1);
+    color: white !important;
+}
+
+/* first page */
+
+.hero{
+  
+    min-height:100vh;
+
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+
+    /* background image */
+    background-image:url('./assets/Descargar\ ai\ generado\ de\ viaje\ a\ Tailandia\ Anuncio\ antecedentes\ con\ Copiar\ espacio\ gratis.jpg');
+    background-size:cover;
+    background-position:center;
+}
+
+/* overlay image */
+.overlay-image{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    object-fit:cover;
+    z-index:1;
+    pointer-events: none;
+}
+
+/* left content */
+.content{
+    position:relative;
+    z-index:10;
+    left:100px;
+    top:-90px;
+      animation-name: para2;
+  animation-duration: 4s;
+}
+
+.content h1{
+    font-size:62px;
+    color:black;
+    font-weight:700;
+}
+
+.content h2{
+    font-size:58px;
+    color:#d4b000;
+    font-family:cursive;
+    font-weight:400;
+   
+}
+
+.content button{
+    margin-top:20px;
+
+    padding:14px 35px;
+
+    border:none;
+    border-radius:40px;
+
+    background:black;
+    color:white;
+
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* center round image */
+
+.circle-image{
+    width: 461px;
+    height: 456px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    left:-120px;
+    z-index: 8;
+
+
+    transition: transform 0.5s ease;
+}
+
+.circle-image:hover{
+    transform: scale(1.4);
+}
+
+.circle-image img{
+    width:100%;
+    height:100%;
+    object-fit:none;
+}
+
+/* right content */
+.trip{
+    width:250px;
+     top:200px;
+     right:-10px;
+    position:relative;
+    z-index:5;
+       animation-name: para1;
+  animation-duration: 4s;
+  
+    
+}
+
+.trip h1{
+    font-size:55px;
+    color:black;
+}
+
+.trip h2{
+    font-size:35px;
+    color:black;
+}
+
+.trip p{
+    margin-top:10px;
+
+    color:#f10c0c;
+    line-height:1.6;
+}
+
+/* plane image */
+.plane{
+    width:80px;
+
+    position:absolute;
+    top:70px;
+    right:258px;
+
+    z-index:5;
+}
+
+/* dotted path */
+   .route{
+    width:70%;
+    z-index: 20;
+    position:absolute;
+    top:140px;
+    left:160px;
+     pointer-events: none;
+
+   }
+   .flight{
+    width:50px;
+    height:50px;
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    z-index:3;
+      transition:2s;
+   }
+ 
+
+.flight{
+   animation:move1 4s linear infinite;
+}
+
+@keyframes move1{
+   from{
+      transform:translate(0,0);
+   }
+   to{
+       transform:translate(-1650px,-750px);
+   }
+}
+
+.get:hover{
+    background-color:rgb(235, 120, 4);
+    color:rgb(20, 3, 106);
+    transition: all 1s;
+   
+    transform: scale(1.1);
+   
+    box-shadow: 0px 0px 30px rgb(253, 124, 3);
+}
+   /******************************** second page *****************************/
+   .block{
+    opacity:0;
+    transform:translateY(100px);
+    transition:all 1s ease;
+}
+
+.block.show{
+    opacity:1;
+    transform:translateY(0);
+}
+      /* content */
+
+/* COMMON */
+
+.block-left,
+.block-right{
+    opacity:0;
+    transition:1s ease;
+}
+
+/* LEFT */
+
+.block-left{
+    transform:translateX(-150px);
+}
+
+/* RIGHT */
+
+.block-right{
+    transform:translateX(150px);
+}
+
+/* SHOW */
+
+.block-left.show,
+.block-right.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+
+      
+    .secondpage{
+    min-height:100vh;
+    background-image: linear-gradient(to bottom right, rgb(183, 232, 146), rgb(251, 106, 3));
+    }
+   .second-headding{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+   }
+   .second-headding h1{
+    font-size:50px;
+      font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+   }
+   .card{
+    width:21%;
+    height:400px;
+    background-color: #d4b000;
+    margin:20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+ 
+   
+   }
+   .second-c1{
+     display:flex;
+    justify-content: space-around;
+    padding:40px;
+    gap:40px;
+    flex-wrap: wrap;
+    align-items: center;
+    position:relative;
+      
+   }
+   .c-iamge{
+    width:100%;
+    height:100%;
+   }
+
+   .subset{
+    width: 100%;
+    height: 198px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    position: absolute;
+    top:430px;
+    left:0px;
+    transition-property: top;
+    transition-duration: 2s;
+   }
+
+   .card:hover .subset{
+   top:226px;
+    }
+.subset1{
+    width: 100%;
+    height: 198px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    position: absolute;
+    bottom:430px;
+    left:-1px;
+    transition-property: bottom;
+    transition-duration: 2s;
+   }
+ .card:hover .subset1{
+   bottom:225px;
+    }
+
+    
+.card-content{
+
+    position:absolute;
+    inset:0;
+
+    z-index:5;
+
+    padding:25px;
+
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    opacity:0;
+    transition:2s;
+}
+
+.m1{
+    font-size:40px;
+}
+.top-content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* hover panna text varum */
+
+.card:hover .card-content{
+    opacity:1;
+}
+
+    /**************************** Third page ***********************/
+ .third-page{
+         min-height:100vh;
+       
+ }
+
+.s1{
+    width: 80%;
+    margin: auto;
+}
+
+.s1 .carousel-item img{
+    /* height: 294px; */
+    object-fit: cover;
+}
+
+/**************** Fourth page ******************/
+ .fourth-page{
+         min-height:100vh;
+        
+ }
+ .fourth-headding{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+   }
+   .fourth-headding h1{
+    font-size:50px;
+      font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+   }
+ .firstimage{
+    display:flex;
+    gap:40px;
+    position: relative;
+ }
+
+.imagepara{
+    padding:20px;
+   font-size: 22px;
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.imagepara h3{
+    text-align: center;
+}
+.imagepara1{
+    padding:20px;
+   font-size: 22px;
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.invisible1{
+    position:absolute;
+    right:10px;
+    
+}
+.invisible2{
+    position:absolute;
+    left:-10px;
+    
+}
+.route3{
+    position: absolute;
+    left:400px;
+    padding:50px;
+   
+}
+.e1{
+    font-size: 50px;
+    position: absolute;
+}
+
+/*************************** fifth page ***************************/
+.fifth-page{
+         min-height:100vh; 
+         background-image: url(./assets/Rectangle\ 65.png);
+         background-size:cover;
+         background-position:center;
+          position:relative;
+ }
+ .fifth-headding{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+   
+   }
+   .fifth-headding h1{
+    font-size:50px;
+      font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:aliceblue
+   }
+   .cardss{
+    display:flex;
+    justify-content: space-around;
+   }
+   .invisible3{
+    position: absolute;
+    bottom:0px;
+    left: 0;
+    width: 100%;
+   }
+   .invisible3-1, .invisible3-2, .invisible3-3{
+    position: absolute;
+    bottom:30px;
+    left:50%;
+    transform: translateX(-50%);
+    color:white;
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+   }
+   .position, .position1, .position2{
+    position: absolute;
+    top:20px;
+    right:20px;
+    color:white;
+    font-size: 28px;
+    width: 60px;
+   }
+   /*************************** sixth page **************************************/
+   .sixth-page{
+         min-height:100vh;
+        position: relative;
+           background-image: linear-gradient(to bottom right, rgb(183, 232, 146), rgb(251, 106, 3));
+ }
+ .sixth-headding{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+   }
+   .sixth-headding h1{
+    font-size:50px;
+      font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+   }
+   .sixth-headding p{
+    padding-left:240px;
+    padding-right: 240px;
+    text-align: center;
+    font-size: 20px;
+   }
+   .card01{
+    width:20%;
+    height:440px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .img-zoom{
+     width:100%;
+     height:100%;
+   
+   }
+   .img-zoom:hover{
+      transform: scale(1.1);
+      transition: all 1s;
+        border-radius: 20px;
+   }
+
+
+.slider{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+   
+}
+
+/* IMAGE CARD */
+
+.card9{
+    width:220px;
+    height:440px;
+    border-radius:150px;
+    overflow:hidden;
+    position:relative;
+    transition:0.5s;
+    cursor:pointer;
+    flex-shrink:0;
+}
+
+.card9 img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1s;
+}
+
+/*  CENTER CARD */
+
+.card9.active{
+    width:420px;
+    height:670px;
+}
+
+.card9:hover{
+    transform:translateY(-20px) scale(1.03);
+}
+
+.card9:hover img{
+    transform:scale(1.1);
+}
+
+/* TEXT */
+
+.content21{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    color:white;
+}
+
+.content21 h1{
+    font-size:55px;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+/* BUTTON  */
+
+.arrow{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    top:-70px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:45px;
+    color:gold;
+}
+
+
+
+
+
+
+@media(max-width:900px){
+
+    .slider{
+        gap:20px;
+    }
+
+    .card9{
+        width:10px;
+        height:300px;
+    }
+
+    .card9.active{
+        width:60px;
+        height:450px;
+    }
+
+    .content h1{
+        font-size:35px;
+    }
+
+    .arrow{
+        width:60px;
+        height:60px;
+        font-size:30px;
+    }
+
+}
+
+
+
+  /************** seventh page *****************/
+
+  .seventh-page{
+         min-height:100vh;
+        position: relative;
+         background-color: #ffffff;
+ }
+ .seventh-headding{
+    display:flex;
+    flex-direction: column;
+    padding-left:15%;
+   
+   }
+
+   .trust h1{
+     font-size:50px;
+      font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+   }
+   .trust{
+     display: flex;
+     padding-left:25%;
+    padding-top:70px;
+        
+    
+   }
+   .nine{
+   
+    font-size:500px;
+    background-image: url(./assets/Descargar\ ai\ generado\ de\ viaje\ a\ Tailandia\ Anuncio\ antecedentes\ con\ Copiar\ espacio\ gratis.jpg);
+    background-size:cover;
+    background-position:center;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-family: Archivo Black;
+   }
+   .nine1{
+    font-size: 194px;
+    padding-top: 267px;
+
+   }
+   .nines{
+    display: flex;
+    padding-top:10px;
+  
+   }
+.p1{
+    background-color: #f9fbf9;
+    padding:20px;
+    font-size: 25px;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    position:absolute;
+    top:540px;
+    left: 39%;
+  
+}
+.para12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.para01{
+    width: 100%;
+}
+.para02, .para03{
+    width: 100%;
+}
+.para03{
+    padding-bottom: 100px;
+}
+
+/* footer */
+
+.footer-section{
+  width:100%;
+  min-height:320px;
+  background:url("./assets/Kerala-Tourism\ 1.png");
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  display:flex;
+  align-items:center;
+  padding:50px 80px;
+  
+}
+
+/* dark overlay */
+.footer-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.35);
+}
+
+.footer-container{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  position:relative;
+  z-index:1;
+  color:white;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.footer-left{
+  max-width:350px;
+}
+
+.footer-left h1{
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+.footer-left p{
+  font-size:16px;
+  line-height:1.7;
+  color:#f1f1f1;
+}
+
+.footer-links h2{
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+.footer-links ul{
+  list-style:none;
+}
+
+.footer-links ul li{
+  margin-bottom:12px;
+}
+
+.footer-links ul li a{
+  text-decoration:none;
+  color:white;
+  font-size:16px;
+  transition:0.3s;
+}
+
+.footer-links ul li a:hover{
+  color:#ffd54f;
+  padding-left:5px;
+}
+
+.address-box h2{
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+.address-box p{
+  font-size:16px;
+  line-height:1.7;
+}
+
+.hello{
+    color: rgb(255, 255, 255) !important;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .content h1 { 
+        font-size: 45px; 
+    }
+    .content h2 {
+         font-size: 40px; 
+        }
+    .content {
+         left: 50px; 
+        }
+    .circle-image {
+         width: 350px;
+          height: 350px;
+           left: 0; 
+        }
+    .trip {
+         top: 150px; 
+        }
+    .trip h1 {
+         font-size: 45px; 
+        }
+    .trip h2 {
+         font-size: 28px; 
+        }
+    .plane {
+         right: 150px; 
+        }
+    .route {
+         width: 80%; 
+         left: 10%; 
+        }
+    .card {
+         width: 45%; 
+        }
+    
+    .card01 { 
+        width: 30%;
+     }
+    .trust h1 {
+         font-size: 40px; 
+        }
+    .nine { 
+        font-size: 300px; 
+    }
+    .nine1 {
+         font-size: 100px;
+          padding-top: 150px; 
+        }
+    .p1 { 
+        left: 20%;
+         top: 450px;
+          font-size: 20px; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+         padding: 10px 20px; 
+        }
+    .right {
+        position: fixed;
+        background-color: #c2f3be;
+        left: -100%;
+        top: 70px;
+        width: 50%;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 40px;
+        transition: all 0.5s;
+        gap: 30px;
+        z-index: 1000;
+       
+    }
+    .b-nav { 
+        visibility: visible;
+         font-size: 30px; 
+         cursor: pointer; 
+    }
+    .image1 {
+         left: 0; top: 0; 
+        }
+    
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 0px;
+    }
+    .content {
+         left: 0; 
+         top: 0; 
+         margin-bottom: 30px;
+         }
+    .content h1 { 
+        font-size: 38px;
+     }
+    .content h2 {
+         font-size: 32px; 
+        }
+    .circle-image {
+        width: 280px;
+        height: 280px;
+        left: 0;
+        margin-bottom: 30px;
+    }
+    .trip {
+         width: 90%; top: 0;
+          right: 0; 
+          text-align: center; 
+        width: 97%;
+        top: 17px;
+        }
+    .trip h1 { 
+        font-size: 22px;
+    }
+    .trip h2 {
+         font-size: 24px; 
+        }
+    .plane, .route, .route3 {
+         display: none; 
+        }
+    
+    .card {
+         width: 45%;
+          margin: 10px auto; 
+        }
+    .second-c1 {
+         padding: 20px; flex-direction: row; 
+        }
+    .second-headding h1{
+        font-size: 35px;
+        text-align: center;
+    }
+
+     .fourth-headding h1{
+        font-size: 35px;
+        text-align: center;
+    } 
+    .fifth-headding h1{
+        font-size: 35px;
+        text-align: center;
+    } 
+    .sixth-headding h1{
+        font-size: 35px;
+        text-align: center;
+    } 
+    .trust h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+    
+    .firstimage { 
+        flex-direction: column; align-items: center; text-align: center; gap: 20px;
+     }
+    .imagepara, .imagepara1 { 
+        padding: 20px; 
+    }
+    .invisible1, .invisible2 {
+         display: none; 
+        }
+    .imagee { 
+        width: 90%; 
+    }
+    
+    .cardss { 
+        flex-direction: column; 
+        align-items: center;
+         gap: 40px; 
+    }
+    .card01 {
+         width: 80%;
+         }
+    .invisible3-1, .invisible3-2, .invisible3-3 { 
+        left: 50%;
+         transform: translateX(-50%); 
+        text-align: center;
+         width: 100%; 
+    }
+    .position, .position1, .position2 {
+         
+                 opacity: 0;
+        }
+    
+    .sixth-headding p {
+         padding-left: 20px;
+          padding-right: 20px;
+         }
+    
+    .seventh-headding {
+         padding-left: 0;
+          align-items: center; 
+        }
+    .trust {
+         padding-left: 0; 
+         flex-direction: column; 
+         align-items: center; 
+        }
+    .nines { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .nine { 
+        font-size: 200px; 
+    }
+    .nine1 {
+         font-size: 80px; 
+         padding-top: 20px; 
+        }
+    .p1 { 
+        position: static; 
+        width: 90%; 
+        margin: 20px auto; 
+        font-size: 18px; 
+        text-align: center;
+     }
+    .para01, .para02, .para03 {
+         padding-left: 20px;
+          padding-right: 20px;
+           text-align: center; 
+        }
+    
+    .footer-section {
+         padding: 40px 25px;
+         }
+    .footer-container { 
+        flex-direction: column;
+         gap: 35px;
+          align-items: center; 
+          text-align: center; 
+        }
+    .footer-left h1 { 
+        font-size: 40px;
+     }
+     .line {
+   
+    left: 0px;
+   
+}
+}
+
+@media only screen and (max-width: 480px) {
+    .right { 
+        width: 70%; 
+    }
+    .content h1 { 
+        font-size: 30px; 
+    }
+    .content h2 { 
+        font-size: 26px; 
+    }
+    .circle-image { 
+        width: 220px; 
+        height: 220px;
+     }
+    .trip h1 { 
+        font-size: 30px; 
+    }
+    .trip h2 {
+         font-size: 20px; 
+        }
+    .card {
+         width: 100%;
+          height: 350px;
+         }
+    .image1 {
+         width: 150px; 
+         height: 75px; 
+        }
+    .second-c1 { 
+        flex-direction: column;
+     }
+    .card01 { 
+        width: 95%; 
+    }
+    .nine { 
+        font-size: 150px;
+     }
+     .third-page {
+    min-height: 44vh;
+}
+.content button {
+    margin-top: 0px;}
+}
+
+@media(max-width:900px){
+
+    .slider{
+        gap:20px;
+    }
+    .card9 {
+        width: 38px;}
+
+}
